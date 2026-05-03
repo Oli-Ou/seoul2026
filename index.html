@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首爾旅遊行程 2025</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F0EFED;--surface:#FAFAF8;--black:#111110;--mid:#666663;--light:#99999A;--border:#D6D4CF;--accent:#2B2BFF;--accent-bg:#EDEDFF;--white:#FFFFFF;--danger:#D93535;--success:#2A7A4B;}
@@ -55,12 +56,9 @@ button,input,select,textarea{font-family:'DM Sans',sans-serif;}
 .metro-badge{display:inline-flex;align-items:center;gap:5px;background:#F8EEFF;border:1px solid #C088C0;border-radius:3px;padding:4px 10px;margin-top:6px;font-size:11px;color:#6A0F6A;font-weight:600;}
 .metro-badge svg{width:13px;height:13px;stroke:#8B1A8B;stroke-width:1.5;fill:none;}
 .metro-line-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:3px;vertical-align:middle;}
-/* NOTE BOX */
 .note-box{display:flex;gap:8px;align-items:flex-start;background:#FFFBF0;border:1px solid #E8D89A;border-radius:3px;padding:8px 12px;margin-top:7px;font-size:12px;color:#7A6010;line-height:1.5;}
 .note-box svg{width:12px;height:12px;stroke:#B09030;stroke-width:1.75;fill:none;flex-shrink:0;margin-top:1px;}
-/* PRICE TAG */
 .price-tag{display:inline-block;font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1px solid #A0A0FF;border-radius:2px;padding:2px 8px;margin-top:4px;}
-/* NOTICE */
 .notice-block{border-top:1px solid var(--border);padding:18px 0;}
 .notice-head{display:flex;align-items:center;gap:9px;margin-bottom:12px;}
 .notice-head svg{width:15px;height:15px;stroke:var(--accent);stroke-width:1.5;fill:none;}
@@ -71,7 +69,6 @@ button,input,select,textarea{font-family:'DM Sans',sans-serif;}
 .notice-list li::before{content:'—';color:var(--accent);font-weight:700;flex-shrink:0;}
 .warn-item{background:#FFF6EE;border:1px solid #EDCBA0;border-radius:3px;padding:9px 13px;margin-top:5px;font-size:12px;color:#8A4A10;display:flex;gap:7px;line-height:1.5;}
 .warn-item svg{width:13px;height:13px;stroke:#C0622A;stroke-width:1.75;fill:none;flex-shrink:0;margin-top:1px;}
-/* CURRENCY */
 .conv-panel{background:var(--white);border:1px solid var(--border);border-radius:5px;padding:18px;margin-bottom:14px;}
 .conv-direction{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:11px;}
 .conv-row{display:flex;align-items:flex-end;gap:10px;}
@@ -90,11 +87,10 @@ button,input,select,textarea{font-family:'DM Sans',sans-serif;}
 .ref-table td:first-child{color:var(--mid);}
 .ref-table td:last-child{text-align:right;font-weight:600;}
 .ref-table tr:last-child td{border-bottom:none;}
-/* BUDGET */
 .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:18px;}
 .stat-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:13px 15px;}
 .stat-card .label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--light);margin-bottom:3px;}
-.stat-card .value{font-size:21px;font-weight:700;color:var(--black);letter-spacing:-.02em;}
+.stat-card .value{font-size:20px;font-weight:700;color:var(--black);letter-spacing:-.02em;}
 .stat-card .sub{font-size:11px;color:var(--light);margin-top:2px;}
 .accent-stat{border-left:3px solid var(--accent);}
 .form-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:9px;}
@@ -107,39 +103,42 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 .btn-primary:hover{opacity:.85;}
 .ledger{border-top:1px solid var(--border);margin-top:18px;}
 .ledger-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);gap:10px;}
-.ledger-left{display:flex;align-items:center;gap:9px;}
+.ledger-left{display:flex;align-items:center;gap:9px;flex:1;min-width:0;}
 .ledger-icon{width:27px;height:27px;border:1px solid var(--border);border-radius:3px;display:flex;align-items:center;justify-content:center;background:var(--white);flex-shrink:0;}
 .ledger-icon svg{width:13px;height:13px;stroke:var(--mid);stroke-width:1.5;fill:none;}
-.ledger-name{font-size:13px;font-weight:500;color:var(--black);}
+.ledger-text{flex:1;min-width:0;}
+.ledger-name{font-size:13px;font-weight:500;color:var(--black);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .ledger-cat{font-size:11px;color:var(--light);text-transform:uppercase;letter-spacing:.04em;}
-.ledger-amt{font-size:14px;font-weight:700;color:var(--black);}
-.ledger-amt-sub{font-size:11px;color:var(--light);font-weight:400;margin-top:1px;}
+.ledger-right{display:flex;align-items:center;gap:9px;flex-shrink:0;}
+.ledger-amt{font-size:14px;font-weight:700;color:var(--black);text-align:right;}
+.ledger-amt-sub{font-size:11px;color:var(--light);font-weight:400;margin-top:1px;text-align:right;}
 .btn-del{background:none;border:none;color:var(--border);padding:3px;font-size:13px;cursor:pointer;transition:color .12s;}
 .btn-del:hover{color:var(--danger);}
 .bar-track{height:3px;background:var(--border);margin:14px 0;display:flex;overflow:hidden;}
 .bar-seg{height:100%;transition:width .4s;}
 .empty-state{padding:36px 0;text-align:center;color:var(--light);font-size:13px;border-top:1px solid var(--border);}
-/* FUND */
 .fund-header{background:var(--white);border:1px solid var(--border);border-radius:5px;padding:18px;margin-bottom:18px;}
 .fund-total-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border);}
 .f-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:3px;}
-.f-val{font-size:24px;font-weight:700;letter-spacing:-.02em;color:var(--black);}
+.f-val{font-size:22px;font-weight:700;letter-spacing:-.02em;color:var(--black);}
 .f-val-sub{font-size:12px;color:var(--light);font-weight:400;margin-top:2px;}
 .f-per-val{font-size:18px;font-weight:700;color:var(--accent);}
 .f-per-sub{font-size:11px;color:var(--light);font-weight:400;margin-top:2px;text-align:right;}
-.fund-seed-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.fund-seed-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
 .fund-seed-row label{font-size:11px;color:var(--mid);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;flex-shrink:0;}
-.fund-seed-input{flex:1;height:36px;padding:0 10px;background:var(--bg);border:1px solid var(--border);border-radius:3px;font-size:15px;font-weight:700;color:var(--black);outline:none;}
+.fund-seed-input{flex:1;min-width:120px;height:36px;padding:0 10px;background:var(--bg);border:1px solid var(--border);border-radius:3px;font-size:15px;font-weight:700;color:var(--black);outline:none;}
 .fund-seed-input:focus{border-color:var(--accent);}
-.fund-seed-twd{font-size:11px;color:var(--light);white-space:nowrap;flex-shrink:0;min-width:70px;}
+.fund-seed-twd{font-size:11px;color:var(--light);white-space:nowrap;flex-shrink:0;}
 .fund-count-wrap{display:flex;align-items:center;gap:6px;flex-shrink:0;}
 .fund-count-wrap label{font-size:11px;color:var(--mid);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;}
 .fund-count-select{height:36px;padding:0 7px;background:var(--bg);border:1px solid var(--border);border-radius:3px;font-size:13px;color:var(--black);outline:none;cursor:pointer;width:62px;}
 .members-editor{border-top:1px solid var(--border);padding-top:12px;margin-top:4px;}
 .members-editor-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--light);margin-bottom:8px;}
-.member-edit-row{display:flex;align-items:center;gap:6px;margin-bottom:5px;}
-.member-num{font-size:11px;color:var(--light);min-width:18px;}
-.member-name-input{flex:1;height:30px;padding:0 8px;background:var(--bg);border:1px solid var(--border);border-radius:3px;font-size:13px;color:var(--black);outline:none;}
+.members-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+@media(max-width:400px){.members-grid{grid-template-columns:1fr;}}
+.member-edit-row{display:flex;align-items:center;gap:6px;}
+.member-num{font-size:11px;color:var(--light);min-width:16px;flex-shrink:0;}
+.member-name-input{flex:1;height:32px;padding:0 8px;background:var(--bg);border:1px solid var(--border);border-radius:3px;font-size:13px;color:var(--black);outline:none;width:100%;min-width:0;}
 .member-name-input:focus{border-color:var(--accent);}
 .chips-wrap{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
 .member-chip{display:flex;align-items:center;gap:5px;background:var(--bg);border:1px solid var(--border);border-radius:3px;padding:4px 10px;}
@@ -148,11 +147,10 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 .chip-share-twd{font-size:10px;color:var(--light);}
 .settle-box{background:var(--accent-bg);border:1px solid #A0A0FF;border-radius:3px;padding:14px;margin-top:16px;}
 .settle-head{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px;}
-.settle-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #C8C8FF;font-size:13px;}
+.settle-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #C8C8FF;font-size:13px;gap:8px;}
 .settle-row:last-child{border-bottom:none;}
 .s-pay{color:var(--success);font-weight:600;}
 .s-owe{color:var(--danger);font-weight:600;}
-/* WEATHER */
 .wx-main{background:var(--black);border-radius:3px;padding:22px;color:var(--white);margin-bottom:18px;display:flex;align-items:flex-end;justify-content:space-between;}
 .wx-left .city{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:3px;}
 .wx-left .temp{font-size:52px;font-weight:700;line-height:1;letter-spacing:-.04em;margin-bottom:5px;}
@@ -169,7 +167,6 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 .wx-tip{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border);font-size:12px;color:var(--mid);}
 .wx-tip:last-child{border-bottom:none;}
 .wx-tip svg{width:14px;height:14px;stroke:var(--accent);stroke-width:1.5;fill:none;flex-shrink:0;margin-top:1px;}
-/* PACKING */
 .pack-progress-bar{height:2px;background:var(--border);margin-bottom:4px;}
 .pack-bar-fill{height:100%;background:var(--accent);transition:width .3s;}
 .pack-status{font-size:11px;color:var(--light);text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px;}
@@ -182,7 +179,6 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 .pack-check{width:15px;height:15px;flex-shrink:0;border:1.5px solid var(--border);border-radius:2px;display:flex;align-items:center;justify-content:center;transition:all .12s;}
 .pack-item.done .pack-check{background:var(--accent);border-color:var(--accent);}
 .pack-item.done .pack-check::after{content:'';display:block;width:4px;height:7px;border:2px solid white;border-top:none;border-left:none;transform:rotate(45deg) translate(-1px,-1px);}
-/* MEMO */
 .memo-hint{display:flex;gap:9px;align-items:flex-start;background:var(--accent-bg);border:1px solid #A0A0FF;border-radius:3px;padding:11px 13px;font-size:12px;color:#1A1ACC;margin-bottom:18px;line-height:1.5;}
 .memo-hint svg{width:13px;height:13px;stroke:var(--accent);stroke-width:1.75;fill:none;flex-shrink:0;margin-top:1px;}
 .memo-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:7px;}
@@ -195,8 +191,7 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 .memo-note{font-size:12px;color:var(--light);line-height:1.4;margin-top:4px;}
 .memo-del{background:none;border:none;color:var(--border);font-size:12px;cursor:pointer;}
 .memo-del:hover{color:var(--danger);}
-/* BOTTOM NAV */
-.bottom-nav{background:var(--white);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:8px 0 14px;}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:8px 0 14px;z-index:200;}
 .nav-btn{display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;color:var(--light);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;min-width:44px;transition:color .12s;cursor:pointer;}
 .nav-btn svg{width:17px;height:17px;stroke-width:1.5;fill:none;stroke:currentColor;}
 .nav-btn.active{color:var(--accent);}
@@ -206,8 +201,7 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 <body>
 
 <header class="app-header">
-  <div class="wordmark">Seoul<span>.</span>
-</div>
+  <div class="wordmark">Seoul<span>.</span>2025</div>
   <div class="trip-meta">5/12 — 5/16 · 5D4N</div>
 </header>
 <div class="flight-strip">
@@ -228,248 +222,66 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 
 <!-- ITINERARY -->
 <div id="itinerary" class="section active">
-  <div class="sec-label">Seoul Trip 2026</div>
+  <div class="sec-label">Seoul Trip 2025</div>
   <div class="sec-title">五天行程</div>
-
-  <!-- DAY 1 -->
   <div class="day-row" id="dr1">
     <button class="day-trigger" onclick="toggleDay('dr1')"><span class="day-num">01</span><span class="day-name">抵達首爾・汝矣島</span><span class="day-date">5/12 MON</span><svg class="day-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
     <div class="day-body open">
       <div class="timeline">
-        <div class="spot accent-dot">
-          <div class="spot-time">06:55</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div>
-          <div class="spot-content"><div class="spot-name">高雄出發 KHH → ICN</div><div class="spot-desc">10:45 抵達仁川，入境填寫申報卡。</div><span class="tag tag-move">交通</span></div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">12:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">機場巴士 6012 → DMC 站</div>
-            <div class="spot-desc">搭乘機場利木津巴士 6012，約 80 分鐘抵達 DMC 站（상암DMC）。</div>
-            <div class="note-box"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>T1 航廈：1F 9B 或 11A 月台</div>
-            <div class="price-tag">₩17,000 ≈ NT$400</div>
-            <span class="tag tag-move">交通</span>
-          </div>
-        </div>
-        <div class="spot">
-          <div class="spot-time">13:50</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">抵達房源・寄放行李</div>
-            <div class="note-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>午餐可在 DMC 或汝矣島解決，汝矣島選擇更多</div>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">15:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">汝矣島現代百貨 더현대 서울</div>
-            <div class="spot-desc">On Running 跑鞋 + Alo Yoga，首爾最美未來感百貨。附近有鷺梁津水產市場可順訪。</div>
-            <div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#9B26AF;"></span>5號線 → 여의나루 (汝矣渡口站) 1號出口</div>
-            <div class="note-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>可先去鷺梁津水產市場再逛百貨</div>
-            <span class="tag tag-shop">購物</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">18:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">晚餐 조가네닭한마리닭갈비</div>
-            <div class="spot-desc">30年老店雞湯・雞排骨，首爾必吃在地老味道。</div>
-            <span class="tag tag-food">晚餐</span>
-          </div>
-        </div>
+        <div class="spot accent-dot"><div class="spot-time">06:55</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div><div class="spot-content"><div class="spot-name">高雄出發 KHH → ICN</div><div class="spot-desc">10:45 抵達仁川，入境填寫申報卡。</div><span class="tag tag-move">交通</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">12:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div class="spot-content"><div class="spot-name">機場巴士 6012 → DMC 站</div><div class="spot-desc">搭乘機場利木津巴士 6012，約 80 分鐘抵達 DMC 站。</div><div class="note-box"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>T1 航廈：1F 9B 或 11A 月台</div><div class="price-tag">₩17,000 ≈ NT$366</div><span class="tag tag-move">交通</span></div></div>
+        <div class="spot"><div class="spot-time">13:50</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div class="spot-content"><div class="spot-name">抵達房源・寄放行李</div><div class="note-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>午餐可在 DMC 或汝矣島解決，汝矣島選擇更多</div></div></div>
+        <div class="spot accent-dot"><div class="spot-time">15:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div><div class="spot-content"><div class="spot-name">汝矣島現代百貨 더현대 서울</div><div class="spot-desc">On Running + Alo Yoga，附近有鷺梁津水產市場可順訪。</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#9B26AF;"></span>5號線 → 여의나루 (汝矣渡口站) 1號出口</div><div class="note-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>可先去鷺梁津水產市場再逛百貨</div><span class="tag tag-shop">購物</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">18:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><div class="spot-content"><div class="spot-name">晚餐 조가네닭한마리닭갈비</div><div class="spot-desc">30 年老店雞湯・雞排骨，首爾在地老味道。</div><span class="tag tag-food">晚餐</span></div></div>
       </div>
     </div>
   </div>
-
-  <!-- DAY 2 -->
   <div class="day-row" id="dr2">
     <button class="day-trigger" onclick="toggleDay('dr2')"><span class="day-num">02</span><span class="day-name">景福宮・鐘路文化</span><span class="day-date">5/13 TUE</span><svg class="day-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
     <div class="day-body">
       <div class="timeline">
         <div class="spot"><div class="spot-time">08:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="spot-content"><div class="spot-name">起床・準備出發</div></div></div>
-        <div class="spot accent-dot">
-          <div class="spot-time">09:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">景福宮 경복궁</div>
-            <div class="spot-desc">朝鮮王朝正宮，建議早到避人潮，可租韓服入場。</div>
-            <div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#0052A4;"></span>3號線 → 경복궁 (景福宮站) 5號出口</div>
-            <span class="tag tag-sight">景點</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">12:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">通仁市場 통인시장</div>
-            <div class="spot-desc">以銅錢購買各攤小吃，步行自景福宮約 10 分鐘。</div>
-            <span class="tag tag-food">午餐</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">14:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">仁寺洞 인사동</div>
-            <div class="spot-desc">傳統工藝、藝廊、咖啡廳聚集的文化街。</div>
-            <div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#0052A4;"></span>3號線 → 안국 (安國站) 6號出口</div>
-            <span class="tag tag-sight">下午</span>
-          </div>
-        </div>
-        <div class="spot">
-          <div class="spot-time">17:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">小支線：od.c.s 跑步用品</div>
-            <div class="spot-desc">仁寺洞周邊跑步選物店，順路可以逛。</div>
-            <span class="tag tag-shop">購物</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">18:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">益善洞韓屋村 익선동</div>
-            <div class="spot-desc">保存最完整的老首爾韓屋胡同，晚上氣氛絕佳。</div>
-            <span class="tag tag-sight">晚上</span>
-          </div>
-        </div>
+        <div class="spot accent-dot"><div class="spot-time">09:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="spot-content"><div class="spot-name">景福宮 경복궁</div><div class="spot-desc">朝鮮王朝正宮，建議早到避人潮，可租韓服入場。</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#0052A4;"></span>3號線 → 경복궁 (景福宮站) 5號出口</div><span class="tag tag-sight">景點</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">12:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div><div class="spot-content"><div class="spot-name">通仁市場 통인시장</div><div class="spot-desc">以銅錢購買各攤小吃，步行自景福宮約 10 分鐘。</div><span class="tag tag-food">午餐</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">14:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><div class="spot-content"><div class="spot-name">仁寺洞 인사동</div><div class="spot-desc">傳統工藝、藝廊、咖啡廳聚集的文化街。</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#0052A4;"></span>3號線 → 안국 (安國站) 6號出口</div><span class="tag tag-sight">下午</span></div></div>
+        <div class="spot"><div class="spot-time">17:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div><div class="spot-content"><div class="spot-name">小支線：od.c.s 跑步用品</div><div class="spot-desc">仁寺洞周邊跑步選物店，順路可以逛。</div><span class="tag tag-shop">購物</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">18:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="spot-content"><div class="spot-name">益善洞韓屋村 익선동</div><div class="spot-desc">保存最完整的老首爾韓屋胡同，晚上氣氛絕佳。</div><span class="tag tag-sight">晚上</span></div></div>
       </div>
     </div>
   </div>
-
-  <!-- DAY 3 -->
   <div class="day-row" id="dr3">
     <button class="day-trigger" onclick="toggleDay('dr3')"><span class="day-num">03</span><span class="day-name">狎鷗亭・聖水洞購物</span><span class="day-date">5/14 WED</span><svg class="day-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
     <div class="day-body">
       <div class="timeline">
         <div class="spot"><div class="spot-time">07:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="spot-content"><div class="spot-name">起床・準備出發</div></div></div>
-        <div class="spot accent-dot">
-          <div class="spot-time">08:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">出發前往狎鷗亭 압구정</div>
-            <div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#00A84D;"></span>盆唐線 → 압구정로데오 (狎鷗亭羅德奧站) 5號出口</div>
-            <span class="tag tag-move">交通</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">09:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">早餐 London Bagel Museum</div>
-            <div class="spot-desc">首爾超人氣貝果店，建議早到避開排隊。</div>
-            <span class="tag tag-food">早餐</span>
-          </div>
-        </div>
-        <div class="spot">
-          <div class="spot-time">10:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">狎鷗亭逛街</div>
-            <div class="spot-desc">吃飽後在周邊自由探索。</div>
-            <div class="note-box"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg>必去：WiggleWiggle · HDEX · ATiiSSU · SATUR</div>
-            <span class="tag tag-shop">購物</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">13:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">午餐 屋塔烤肉 옥탑방 고기</div>
-            <div class="spot-desc">狎鷗亭人氣烤肉店。</div>
-            <span class="tag tag-food">午餐</span>
-          </div>
-        </div>
-        <div class="spot">
-          <div class="spot-time">14:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">前往聖水洞 성수동</div>
-            <div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#00A84D;"></span>2號線 → 뚝섬 (纛島站) 1號出口 步行 10 分</div>
-            <span class="tag tag-move">交通</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">15:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">聖水洞 → 首爾林</div>
-            <div class="spot-desc">韓系設計師品牌聚集地，接著步行至首爾林繼續逛。</div>
-            <div class="note-box"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg>必去：ADER · Dior · SAMUEL SMALLS 選物店 · KioskKiosk 文具選物</div>
-            <span class="tag tag-shop">購物</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">18:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">晚餐 능동미나리 陵洞水芹菜</div>
-            <div class="spot-desc">韓國在地水芹菜豬肉料理，清爽解膩。</div>
-            <span class="tag tag-food">晚餐</span>
-          </div>
-        </div>
+        <div class="spot accent-dot"><div class="spot-time">08:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div class="spot-content"><div class="spot-name">出發前往狎鷗亭 압구정</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#F5A200;"></span>盆唐線 → 압구정로데오 (狎鷗亭羅德奧站) 5號出口</div><span class="tag tag-move">交通</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">09:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><div class="spot-content"><div class="spot-name">早餐 London Bagel Museum</div><div class="spot-desc">首爾超人氣貝果店，建議早到避開排隊。</div><span class="tag tag-food">早餐</span></div></div>
+        <div class="spot"><div class="spot-time">10:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div><div class="spot-content"><div class="spot-name">狎鷗亭逛街</div><div class="note-box"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg>必去：WiggleWiggle · HDEX · ATiiSSU · SATUR</div><span class="tag tag-shop">購物</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">13:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><div class="spot-content"><div class="spot-name">午餐 屋塔烤肉 옥탑방 고기</div><div class="spot-desc">狎鷗亭人氣烤肉店。</div><span class="tag tag-food">午餐</span></div></div>
+        <div class="spot"><div class="spot-time">14:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div class="spot-content"><div class="spot-name">前往聖水洞 성수동</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#00A84D;"></span>2號線 → 뚝섬 (纛島站) 1號出口 步行 10 分</div><span class="tag tag-move">交通</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">15:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div><div class="spot-content"><div class="spot-name">聖水洞 → 首爾林</div><div class="note-box"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg>必去：ADER · Dior · SAMUEL SMALLS 選物店 · KioskKiosk 文具選物</div><span class="tag tag-shop">購物</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">18:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><div class="spot-content"><div class="spot-name">晚餐 능동미나리 陵洞水芹菜</div><div class="spot-desc">韓國在地水芹菜豬肉料理，清爽解膩。</div><span class="tag tag-food">晚餐</span></div></div>
       </div>
     </div>
   </div>
-
-  <!-- DAY 4 -->
   <div class="day-row" id="dr4">
     <button class="day-trigger" onclick="toggleDay('dr4')"><span class="day-num">04</span><span class="day-name">廣藏市場・明洞</span><span class="day-date">5/15 THU</span><svg class="day-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
     <div class="day-body">
       <div class="timeline">
         <div class="spot"><div class="spot-time">08:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="spot-content"><div class="spot-name">起床・準備出發</div></div></div>
-        <div class="spot accent-dot">
-          <div class="spot-time">09:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">廣藏市場 광장시장</div>
-            <div class="spot-desc">首爾最古老傳統市場，必吃綠豆煎餅、麻藥紫菜飯捲、生魚片、馬格利酒。</div>
-            <div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#009246;"></span>1號線 → 종로5가 (鐘路5街站) 8號出口</div>
-            <span class="tag tag-food">早午餐</span>
-          </div>
-        </div>
-        <div class="spot">
-          <div class="spot-time">12:00</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">前往明洞 명동</div>
-            <div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#009246;"></span>4號線 → 명동 (明洞站) 6號出口</div>
-            <span class="tag tag-move">交通</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">12:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">明洞逛街採買</div>
-            <div class="spot-desc">美妝保養、街頭小吃、紀念品一條街，退稅商店集中。</div>
-            <span class="tag tag-shop">購物</span>
-          </div>
-        </div>
-        <div class="spot accent-dot">
-          <div class="spot-time">18:30</div>
-          <div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-          <div class="spot-content">
-            <div class="spot-name">晚餐（二選一）</div>
-            <div class="spot-desc"><strong>選項 A</strong> — 烏達里家醬蟹 우달이네간장게장<br>韓國正宗醬醃螃蟹，下飯神器。<br><br><strong>選項 B</strong> — 新東宮 Sindonggung 신동궁<br>馬鈴薯排骨湯，濃郁暖胃首選。</div>
-            <span class="tag tag-food">晚餐</span>
-          </div>
-        </div>
+        <div class="spot accent-dot"><div class="spot-time">09:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><div class="spot-content"><div class="spot-name">廣藏市場 광장시장</div><div class="spot-desc">必吃綠豆煎餅、麻藥紫菜飯捲、生魚片、馬格利酒。</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#009246;"></span>1號線 → 종로5가 (鐘路5街站) 8號出口</div><span class="tag tag-food">早午餐</span></div></div>
+        <div class="spot"><div class="spot-time">12:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div class="spot-content"><div class="spot-name">前往明洞 명동</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#00AFD8;"></span>4號線 → 명동 (明洞站) 6號出口</div><span class="tag tag-move">交通</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">12:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.95-1.57L23 6H6"/></svg></div><div class="spot-content"><div class="spot-name">明洞逛街採買</div><div class="spot-desc">美妝保養、街頭小吃、紀念品，退稅商店集中。</div><span class="tag tag-shop">購物</span></div></div>
+        <div class="spot accent-dot"><div class="spot-time">18:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><div class="spot-content"><div class="spot-name">晚餐（二選一）</div><div class="spot-desc"><strong>A</strong> — 烏達里家醬蟹 우달이네간장게장　醬醃螃蟹，下飯神器。<br><strong>B</strong> — 新東宮 신동궁　馬鈴薯排骨湯，濃郁暖胃。</div><span class="tag tag-food">晚餐</span></div></div>
       </div>
     </div>
   </div>
-
-  <!-- DAY 5 -->
   <div class="day-row" id="dr5">
     <button class="day-trigger" onclick="toggleDay('dr5')"><span class="day-num">05</span><span class="day-name">返台</span><span class="day-date">5/16 FRI</span><svg class="day-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
     <div class="day-body">
       <div class="timeline">
         <div class="spot"><div class="spot-time">08:00</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div><div class="spot-content"><div class="spot-name">最後採買・退稅</div><div class="spot-desc">便利商店補貨，機場辦理 TAX REFUND。</div></div></div>
-        <div class="spot"><div class="spot-time">09:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div class="spot-content"><div class="spot-name">前往仁川機場</div><div class="spot-desc">搭 AREX 直通至仁川，建議出發前 3 小時到機場。</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#00AFD8;"></span>AREX 직통 서울역 → 인천공항 (仁川機場)</div></div></div>
+        <div class="spot"><div class="spot-time">09:30</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div class="spot-content"><div class="spot-name">前往仁川機場</div><div class="spot-desc">搭 AREX 直通至仁川，建議出發前 3 小時到機場。</div><div class="metro-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="metro-line-dot" style="background:#00AFD8;"></span>AREX 직통 서울역 → 인천공항</div></div></div>
         <div class="spot accent-dot"><div class="spot-time">12:05</div><div class="spot-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div><div class="spot-content"><div class="spot-name">ICN → KHH 返台</div><div class="spot-desc">14:00 抵達高雄。</div><span class="tag tag-move">交通</span></div></div>
       </div>
     </div>
@@ -481,22 +293,22 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
   <div class="sec-label">Pre-Trip Checklist</div>
   <div class="sec-title">行前注意事項</div>
   <div class="notice-block"><div class="notice-head"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>入境文件</span></div><ul class="notice-list"><li>入境韓國需填寫入境申報卡（機上或機場領取）</li><li>台灣護照免簽入境，停留最長 90 天</li><li>建議提前下載 Visit Korea 電子申報 App</li></ul></div>
-  <div class="notice-block"><div class="notice-head"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg><span>行動電源規定</span></div><ul class="notice-list"><li>行動電源及帶有電源物品 — 只能放隨身行李</li><li>禁止放入託運行李（海關會沒收）</li><li>飛機上不可取出使用</li></ul><div class="warn-item"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>EVE 止痛藥含布洛芬，在韓屬列管藥物，禁止攜帶入境</div></div>
+  <div class="notice-block"><div class="notice-head"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg><span>行動電源規定</span></div><ul class="notice-list"><li>行動電源及帶有電源物品 — 只能放隨身行李</li><li>禁止放入託運行李</li><li>飛機上不可取出使用</li></ul><div class="warn-item"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>EVE 止痛藥含布洛芬，在韓屬列管藥物，禁止攜帶入境</div></div>
   <div class="notice-block"><div class="notice-head"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span>出行小提示</span></div><ul class="notice-list"><li>準備 T-money 交通卡，地鐵公車全適用</li><li>許多傳統市場攤位僅收現金</li><li>在台灣換韓元比在韓國更划算</li><li>出境時在機場辦理 TAX REFUND 退稅</li></ul></div>
 </div>
 
 <!-- CURRENCY -->
 <div id="currency" class="section">
-  <div class="sec-label">Exchange Rate</div>
+  <div class="sec-label">Exchange Rate · Google 匯率</div>
   <div class="sec-title">台幣 / 韓元</div>
   <div class="conv-panel">
     <div class="conv-direction">TWD → KRW</div>
     <div class="conv-row">
       <div class="conv-field"><div class="conv-label">台幣 NT$</div><input class="conv-input" id="twd-in" type="number" min="0" placeholder="1000" oninput="cvtTWD()"></div>
       <div class="conv-sep">→</div>
-      <div class="conv-field"><div class="conv-label">韓元 ₩</div><input class="conv-input" id="krw-out" type="text" placeholder="42,500" readonly></div>
+      <div class="conv-field"><div class="conv-label">韓元 ₩</div><input class="conv-input" id="krw-out" type="text" placeholder="46,500" readonly></div>
     </div>
-    <div class="conv-rate">參考匯率：1 TWD = 42.5 KRW（依當日牌告為準）</div>
+    <div class="conv-rate">Google 匯率：1 TWD = 46.5 KRW</div>
     <div class="quick-row">
       <button class="quick-pill" onclick="setT(500)">NT$500</button><button class="quick-pill" onclick="setT(1000)">NT$1,000</button><button class="quick-pill" onclick="setT(3000)">NT$3,000</button><button class="quick-pill" onclick="setT(5000)">NT$5,000</button><button class="quick-pill" onclick="setT(10000)">NT$10,000</button>
     </div>
@@ -506,20 +318,20 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
     <div class="conv-row">
       <div class="conv-field"><div class="conv-label">韓元 ₩</div><input class="conv-input" id="krw-in" type="number" min="0" placeholder="10000" oninput="cvtKRW()"></div>
       <div class="conv-sep">→</div>
-      <div class="conv-field"><div class="conv-label">台幣 NT$</div><input class="conv-input" id="twd-out" type="text" placeholder="235" readonly></div>
+      <div class="conv-field"><div class="conv-label">台幣 NT$</div><input class="conv-input" id="twd-out" type="text" placeholder="215" readonly></div>
     </div>
-    <div class="conv-rate">參考匯率：₩1,000 ≈ NT$23.5</div>
+    <div class="conv-rate">Google 匯率：₩1,000 ≈ NT$21.5</div>
     <div class="quick-row">
       <button class="quick-pill" onclick="setK(10000)">₩10,000</button><button class="quick-pill" onclick="setK(30000)">₩30,000</button><button class="quick-pill" onclick="setK(50000)">₩50,000</button><button class="quick-pill" onclick="setK(100000)">₩100,000</button>
     </div>
   </div>
   <div class="sec-label" style="margin-top:6px;">常用價格參考</div>
   <table class="ref-table">
-    <tr><td>地鐵單程</td><td>₩1,400 ≈ NT$33</td></tr>
-    <tr><td>機場巴士 6012</td><td>₩17,000 ≈ NT$400</td></tr>
-    <tr><td>便利商店飯糰</td><td>₩1,800 ≈ NT$42</td></tr>
-    <tr><td>炸雞一隻</td><td>₩22,000 ≈ NT$517</td></tr>
-    <tr><td>咖啡廳拿鐵</td><td>₩6,000 ≈ NT$141</td></tr>
+    <tr><td>地鐵單程</td><td>₩1,400 ≈ NT$30</td></tr>
+    <tr><td>機場巴士 6012</td><td>₩17,000 ≈ NT$366</td></tr>
+    <tr><td>便利商店飯糰</td><td>₩1,800 ≈ NT$39</td></tr>
+    <tr><td>炸雞一隻</td><td>₩22,000 ≈ NT$473</td></tr>
+    <tr><td>咖啡廳拿鐵</td><td>₩6,000 ≈ NT$129</td></tr>
   </table>
 </div>
 
@@ -528,14 +340,14 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
   <div class="sec-label">Personal Finance</div>
   <div class="sec-title">個人記帳</div>
   <div class="stat-row">
-    <div class="stat-card accent-stat"><div class="label">總花費</div><div class="value" id="b-total">NT$0</div><div class="sub" id="b-krw">≈ ₩0</div></div>
+    <div class="stat-card accent-stat"><div class="label">總花費</div><div class="value" id="b-total">₩0</div><div class="sub" id="b-twd">≈ NT$0</div></div>
     <div class="stat-card"><div class="label">筆數</div><div class="value" id="b-count">0</div><div class="sub">筆消費</div></div>
   </div>
   <div class="bar-track" id="b-bar"></div>
-  <div class="form-label">新增消費</div>
+  <div class="form-label">新增消費（韓元）</div>
   <div class="form-row">
     <input class="form-input" id="e-name" placeholder="消費項目">
-    <input class="form-input" id="e-amt" type="number" min="0" placeholder="NT$" style="max-width:90px;">
+    <input class="form-input" id="e-amt" type="number" min="0" placeholder="₩" style="max-width:100px;">
     <select class="form-select" id="e-cat"><option value="food">餐飲</option><option value="shop">購物</option><option value="move">交通</option><option value="sight">門票</option><option value="hotel">住宿</option><option value="other">其他</option></select>
     <button class="btn-primary" onclick="addExp()">+ 記帳</button>
   </div>
@@ -552,12 +364,12 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
       <div style="text-align:right;"><div class="f-lbl">每人應付</div><div class="f-per-val" id="f-per">₩0</div><div class="f-per-sub" id="f-per-twd">≈ NT$0</div></div>
     </div>
     <div class="fund-seed-row">
-      <label>預存基金 ₩</label>
+      <label>預存 ₩</label>
       <input class="fund-seed-input" id="f-seed" type="number" min="0" placeholder="0" oninput="renderFund()">
       <div class="fund-seed-twd" id="f-seed-twd"></div>
       <div class="fund-count-wrap"><label>人數</label><select class="fund-count-select" id="f-count" onchange="updMembers()"><option value="2">2人</option><option value="3">3人</option><option value="4">4人</option><option value="5">5人</option><option value="6">6人</option><option value="7">7人</option><option value="8" selected>8人</option></select></div>
     </div>
-    <div class="members-editor"><div class="members-editor-title">成員名稱（可修改）</div><div id="f-name-inputs"></div></div>
+    <div class="members-editor"><div class="members-editor-title">成員名稱（可修改）</div><div class="members-grid" id="f-name-inputs"></div></div>
     <div class="chips-wrap" id="f-chips"></div>
   </div>
   <div class="form-label">新增公用支出</div>
@@ -591,7 +403,7 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
     <div class="wx-tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>5月首爾日夜溫差大（11–24°C），建議洋蔥式穿搭</div>
     <div class="wx-tip"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="8" y2="6"/><path d="M2 12h4l2-4 4 8 2-4h4"/></svg>5/14 有降雨機率，帶輕便折疊傘</div>
     <div class="wx-tip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>日間陽光強，防曬乳必備</div>
-    <div class="wx-tip"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>以上為示範數據，出發前請至 KMA 韓國氣象廳確認最新預報</div>
+    <div class="wx-tip"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>以上為示範數據，出發前請至 KMA 韓國氣象廳確認</div>
   </div>
 </div>
 
@@ -633,16 +445,11 @@ textarea.form-input{height:58px;padding:8px 10px;resize:none;line-height:1.4;}
 </div>
 
 <script>
-const RATE=42.5;
+const RATE=46.5;
 function krwToTwd(k){return Math.round(k/RATE);}
 function fmtKrw(n){return '₩'+Math.round(n).toLocaleString();}
 function fmtTwd(n){return 'NT$'+Math.round(n).toLocaleString();}
-function showTab(id,btn){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.tab-btn,.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  if(btn){btn.classList.add('active');document.querySelectorAll('.tab-btn,.nav-btn').forEach(b=>{if(b!==btn&&b.getAttribute('onclick')===btn.getAttribute('onclick'))b.classList.add('active');});}
-}
+function showTab(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.tab-btn,.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');if(btn){btn.classList.add('active');document.querySelectorAll('.tab-btn,.nav-btn').forEach(b=>{if(b!==btn&&b.getAttribute('onclick')===btn.getAttribute('onclick'))b.classList.add('active');});}}
 function toggleDay(id){const row=document.getElementById(id);const body=row.querySelector('.day-body');const open=body.classList.toggle('open');row.classList.toggle('open',open);}
 function cvtTWD(){const v=parseFloat(document.getElementById('twd-in').value);document.getElementById('krw-out').value=isNaN(v)||v===0?'':Math.round(v*RATE).toLocaleString();}
 function cvtKRW(){const v=parseFloat(document.getElementById('krw-in').value);document.getElementById('twd-out').value=isNaN(v)||v===0?'':Math.round(v/RATE).toLocaleString();}
@@ -653,15 +460,15 @@ const catIcons={food:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
 const catColors={food:'#E8813A',shop:'#2B2BFF',move:'#888',sight:'#2A7A4B',hotel:'#9B6CC8',other:'#999'};
 function addExp(){const name=document.getElementById('e-name').value.trim();const amt=parseFloat(document.getElementById('e-amt').value);const cat=document.getElementById('e-cat').value;if(!name||isNaN(amt)||amt<=0)return;expenses.push({name,amt,cat,id:Date.now()});document.getElementById('e-name').value='';document.getElementById('e-amt').value='';renderExp();}
 function delExp(id){expenses=expenses.filter(e=>e.id!==id);renderExp();}
-function renderExp(){const total=expenses.reduce((s,e)=>s+e.amt,0);document.getElementById('b-total').textContent='NT$'+total.toLocaleString();document.getElementById('b-krw').textContent='≈ ₩'+Math.round(total*RATE).toLocaleString();document.getElementById('b-count').textContent=expenses.length;const ledger=document.getElementById('b-ledger');if(!expenses.length){ledger.innerHTML='<div class="empty-state">尚無消費紀錄</div>';document.getElementById('b-bar').innerHTML='';return;}ledger.innerHTML=[...expenses].reverse().map(e=>`<div class="ledger-row"><div class="ledger-left"><div class="ledger-icon">${catIcons[e.cat]}</div><div><div class="ledger-name">${e.name}</div><div class="ledger-cat">${e.cat}</div></div></div><div style="display:flex;align-items:center;gap:9px;"><div class="ledger-amt">NT$${e.amt.toLocaleString()}</div><button class="btn-del" onclick="delExp(${e.id})">✕</button></div></div>`).join('');const cats={};expenses.forEach(e=>{cats[e.cat]=(cats[e.cat]||0)+e.amt;});document.getElementById('b-bar').innerHTML=Object.entries(cats).map(([c,v])=>`<div class="bar-seg" style="width:${(v/total*100).toFixed(1)}%;background:${catColors[c]}"></div>`).join('');}
+function renderExp(){const total=expenses.reduce((s,e)=>s+e.amt,0);document.getElementById('b-total').textContent=fmtKrw(total);document.getElementById('b-twd').textContent='≈ '+fmtTwd(krwToTwd(total));document.getElementById('b-count').textContent=expenses.length;const ledger=document.getElementById('b-ledger');if(!expenses.length){ledger.innerHTML='<div class="empty-state">尚無消費紀錄</div>';document.getElementById('b-bar').innerHTML='';return;}ledger.innerHTML=[...expenses].reverse().map(e=>`<div class="ledger-row"><div class="ledger-left"><div class="ledger-icon">${catIcons[e.cat]}</div><div class="ledger-text"><div class="ledger-name">${e.name}</div><div class="ledger-cat">${e.cat}</div></div></div><div class="ledger-right"><div><div class="ledger-amt">${fmtKrw(e.amt)}</div><div class="ledger-amt-sub">≈ ${fmtTwd(krwToTwd(e.amt))}</div></div><button class="btn-del" onclick="delExp(${e.id})">✕</button></div></div>`).join('');const cats={};expenses.forEach(e=>{cats[e.cat]=(cats[e.cat]||0)+e.amt;});document.getElementById('b-bar').innerHTML=Object.entries(cats).map(([c,v])=>`<div class="bar-seg" style="width:${(v/total*100).toFixed(1)}%;background:${catColors[c]}"></div>`).join('');}
 let fundItems=[];let memberCount=8;let memberNames=Array.from({length:8},(_,i)=>'成員'+(i+1));
 function getMemberNames(){return Array.from({length:memberCount},(_,i)=>{const inp=document.getElementById('mn-'+i);return inp?inp.value.trim()||('成員'+(i+1)):('成員'+(i+1));});}
 function updMembers(){memberCount=parseInt(document.getElementById('f-count').value);while(memberNames.length<memberCount)memberNames.push('成員'+(memberNames.length+1));renderNameInputs();renderFund();}
-function renderNameInputs(){const wrap=document.getElementById('f-name-inputs');wrap.innerHTML='';const grid=document.createElement('div');grid.style.cssText='display:grid;grid-template-columns:1fr 1fr;gap:5px;';for(let i=0;i<memberCount;i++){const row=document.createElement('div');row.className='member-edit-row';const saved=memberNames[i]||('成員'+(i+1));row.innerHTML=`<span class="member-num">${i+1}</span><input class="member-name-input" id="mn-${i}" value="${saved}" placeholder="成員${i+1}" oninput="syncName(${i})">`;grid.appendChild(row);}wrap.appendChild(grid);}
+function renderNameInputs(){const wrap=document.getElementById('f-name-inputs');wrap.innerHTML='';for(let i=0;i<memberCount;i++){const row=document.createElement('div');row.className='member-edit-row';const saved=memberNames[i]||('成員'+(i+1));row.innerHTML=`<span class="member-num">${i+1}</span><input class="member-name-input" id="mn-${i}" value="${saved}" placeholder="成員${i+1}" oninput="syncName(${i})">`;wrap.appendChild(row);}}
 function syncName(i){const inp=document.getElementById('mn-'+i);if(inp)memberNames[i]=inp.value;renderFund();}
 function addFund(){const name=document.getElementById('f-name').value.trim();const amt=parseFloat(document.getElementById('f-amt').value);const payer=document.getElementById('f-payer').value;if(!name||isNaN(amt)||amt<=0)return;fundItems.push({name,amt,payer,id:Date.now()});document.getElementById('f-name').value='';document.getElementById('f-amt').value='';renderFund();}
 function delFund(id){fundItems=fundItems.filter(f=>f.id!==id);renderFund();}
-function renderFund(){const names=getMemberNames();const seedKrw=parseFloat(document.getElementById('f-seed').value)||0;const expKrw=fundItems.reduce((s,f)=>s+f.amt,0);const totalKrw=seedKrw+expKrw;const perKrw=memberCount>0?totalKrw/memberCount:0;document.getElementById('f-total').textContent=fmtKrw(totalKrw);document.getElementById('f-total-twd').textContent='≈ '+fmtTwd(krwToTwd(totalKrw));document.getElementById('f-per').textContent=fmtKrw(perKrw);document.getElementById('f-per-twd').textContent='≈ '+fmtTwd(krwToTwd(perKrw));const seedTwdEl=document.getElementById('f-seed-twd');seedTwdEl.textContent=seedKrw>0?'≈ '+fmtTwd(krwToTwd(seedKrw)):'';const ps=document.getElementById('f-payer');const cur=ps.value;ps.innerHTML=names.map(n=>`<option value="${n}">${n}</option>`).join('');if(names.includes(cur))ps.value=cur;document.getElementById('f-chips').innerHTML=names.map(n=>`<div class="member-chip"><span class="chip-name">${n}</span><span class="chip-share">${fmtKrw(perKrw)}</span><span class="chip-share-twd">≈${fmtTwd(krwToTwd(perKrw))}</span></div>`).join('');const ledger=document.getElementById('f-ledger');if(!fundItems.length){ledger.innerHTML='<div class="empty-state">尚無公用支出</div>';document.getElementById('settle-box').style.display='none';return;}ledger.innerHTML=[...fundItems].reverse().map(f=>`<div class="ledger-row"><div class="ledger-left"><div class="ledger-icon">${catIcons['other']}</div><div><div class="ledger-name">${f.name}</div><div class="ledger-cat">${f.payer}</div></div></div><div style="display:flex;align-items:center;gap:9px;text-align:right;"><div><div class="ledger-amt">${fmtKrw(f.amt)}</div><div class="ledger-amt-sub">≈ ${fmtTwd(krwToTwd(f.amt))}</div></div><button class="btn-del" onclick="delFund(${f.id})">✕</button></div></div>`).join('');const paid={};names.forEach(n=>{paid[n]=0;});if(seedKrw>0)names.forEach(n=>{paid[n]+=seedKrw/memberCount;});fundItems.forEach(f=>{if(paid[f.payer]!==undefined)paid[f.payer]+=f.amt;});document.getElementById('settle-box').style.display='block';document.getElementById('settle-rows').innerHTML=Object.entries(paid).map(([m,v])=>{const diff=v-perKrw;const sign=diff>=0?`<span class="s-pay">${fmtKrw(diff)} 可收回</span>`:`<span class="s-owe">${fmtKrw(Math.abs(diff))} 需補</span>`;return`<div class="settle-row"><span>${m}</span><div style="text-align:right;"><div>${sign}</div><div style="font-size:11px;color:var(--light);">已付 ${fmtKrw(v)} ≈ ${fmtTwd(krwToTwd(v))}</div></div></div>`;}).join('');}
+function renderFund(){const names=getMemberNames();const seedKrw=parseFloat(document.getElementById('f-seed').value)||0;const expKrw=fundItems.reduce((s,f)=>s+f.amt,0);const totalKrw=seedKrw+expKrw;const perKrw=memberCount>0?totalKrw/memberCount:0;document.getElementById('f-total').textContent=fmtKrw(totalKrw);document.getElementById('f-total-twd').textContent='≈ '+fmtTwd(krwToTwd(totalKrw));document.getElementById('f-per').textContent=fmtKrw(perKrw);document.getElementById('f-per-twd').textContent='≈ '+fmtTwd(krwToTwd(perKrw));const seedEl=document.getElementById('f-seed-twd');seedEl.textContent=seedKrw>0?'≈ '+fmtTwd(krwToTwd(seedKrw)):'';const ps=document.getElementById('f-payer');const cur=ps.value;ps.innerHTML=names.map(n=>`<option value="${n}">${n}</option>`).join('');if(names.includes(cur))ps.value=cur;document.getElementById('f-chips').innerHTML=names.map(n=>`<div class="member-chip"><span class="chip-name">${n}</span><span class="chip-share">${fmtKrw(perKrw)}</span><span class="chip-share-twd">≈${fmtTwd(krwToTwd(perKrw))}</span></div>`).join('');const ledger=document.getElementById('f-ledger');if(!fundItems.length){ledger.innerHTML='<div class="empty-state">尚無公用支出</div>';document.getElementById('settle-box').style.display='none';return;}ledger.innerHTML=[...fundItems].reverse().map(f=>`<div class="ledger-row"><div class="ledger-left"><div class="ledger-icon">${catIcons['other']}</div><div class="ledger-text"><div class="ledger-name">${f.name}</div><div class="ledger-cat">${f.payer}</div></div></div><div class="ledger-right"><div><div class="ledger-amt">${fmtKrw(f.amt)}</div><div class="ledger-amt-sub">≈ ${fmtTwd(krwToTwd(f.amt))}</div></div><button class="btn-del" onclick="delFund(${f.id})">✕</button></div></div>`).join('');const paid={};names.forEach(n=>{paid[n]=0;});if(seedKrw>0)names.forEach(n=>{paid[n]+=seedKrw/memberCount;});fundItems.forEach(f=>{if(paid[f.payer]!==undefined)paid[f.payer]+=f.amt;});document.getElementById('settle-box').style.display='block';document.getElementById('settle-rows').innerHTML=Object.entries(paid).map(([m,v])=>{const diff=v-perKrw;const sign=diff>=0?`<span class="s-pay">${fmtKrw(diff)} 可收回</span>`:`<span class="s-owe">${fmtKrw(Math.abs(diff))} 需補</span>`;return`<div class="settle-row"><span>${m}</span><div style="text-align:right;"><div>${sign}</div><div style="font-size:11px;color:var(--light);">${fmtKrw(v)} ≈ ${fmtTwd(krwToTwd(v))}</div></div></div>`;}).join('');}
 let packItems=[{n:'護照',d:false},{n:'台幣 / 韓元現金',d:false},{n:'信用卡',d:false},{n:'T-money 交通卡',d:false},{n:'行動電源（隨身）',d:false},{n:'充電線',d:false},{n:'轉接頭（A型）',d:false},{n:'輕便雨傘',d:false},{n:'防曬乳',d:false},{n:'換洗衣物 ×5',d:false},{n:'薄外套',d:false},{n:'舒適走路鞋',d:false},{n:'面膜 / 保養品',d:false},{n:'腸胃藥 / 感冒藥',d:false},{n:'口罩備用',d:false},{n:'隱形眼鏡',d:false}].map((x,i)=>({...x,id:i+1}));
 let packNext=100;
 function addPack(){const v=document.getElementById('p-input').value.trim();if(!v)return;packItems.push({n:v,d:false,id:packNext++});document.getElementById('p-input').value='';renderPack();}
